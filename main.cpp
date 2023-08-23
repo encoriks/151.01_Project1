@@ -1,9 +1,12 @@
+Allen Ace Abel
+Enrico Dizon
+Javier Bolong
 // Program to find correlation coefficient
 #include<bits/stdc++.h>
 #include<iostream>
 #include<vector>
 using namespace std;
-//testing pushing shit
+//testing pushing
 //COdeblock gaming testing
 // function that returns correlation coefficient.
 float crossCorrelation(float X_raw[], float Y_raw[], float n_X, float n_Y)
