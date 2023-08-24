@@ -1,6 +1,6 @@
-Allen Ace Abel
-Enrico Dizon
-Javier Bolong
+//Allen Ace Abel
+//Javier Bolong
+//Enrico Dizon
 // Program to find correlation coefficient
 #include<bits/stdc++.h>
 #include<iostream>
@@ -9,19 +9,19 @@ using namespace std;
 //testing pushing
 //COdeblock gaming testing
 // function that returns correlation coefficient.
-float crossCorrelation(float X_raw[], float Y_raw[], float n_X, float n_Y)
+double crossCorrelation(double X_raw[], double Y_raw[], double n_X, double n_Y)
 {
     //proc means processed
     //proc = average - X or Y(n)
-    float average_X = 0, average_Y = 0, proc_X = 0, proc_Y = 0, counter = 0, hold = 0;
+    double average_X = 0, average_Y = 0, proc_X = 0, proc_Y = 0, counter = 0, hold = 0;
 
-    vector<float> list_proc_X = {};
-    vector<float> list_proc_Y = {};
+    vector<double> list_proc_X = {};
+    vector<double> list_proc_Y = {};
 
-    vector<float> cross_X = {};
-    vector<float> cross_Y = {};
+    vector<double> cross_X = {};
+    vector<double> cross_Y = {};
 
-    vector<float> r_XY = {};
+    vector<double> r_XY = {};
 
     //loops for averages
     for (int i = 0; i < n_X; i++)
@@ -90,12 +90,12 @@ float crossCorrelation(float X_raw[], float Y_raw[], float n_X, float n_Y)
 int main()
 {
 
-    float X[] = {1, 5, 10, 3, 5};
-    float Y[] = {4, 2, 20, 3, -5};
+    double X[] = {1, 5, 10, 3, 5};
+    double Y[] = {4, 2, 20, 3, -5};
 
     //Find the size of array.
-    int n_X = sizeof(X)/sizeof(float);
-    int n_Y = sizeof(Y)/sizeof(float);
+    int n_X = sizeof(X)/sizeof(double);
+    int n_Y = sizeof(Y)/sizeof(double);
 
     //Function call to crossCorrelation.
     crossCorrelation(X, Y, n_X, n_Y);
