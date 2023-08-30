@@ -1,7 +1,7 @@
 //Allen Ace Abel
 //Javier Bolong
 //Enrico Dizon
-// Program to find correlation coefficient
+//Program to find correlation coefficient
 #include<bits/stdc++.h>
 #include<iostream>
 #include<fstream>
