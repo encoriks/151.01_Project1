@@ -1,6 +1,6 @@
-Allen Ace Abel
-Enrico Dizon
-Javier Bolong
+//Allen Ace Abel
+//Enrico Dizon
+//Javier Bolong
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -84,6 +84,16 @@ float crossCorrelation(const std::vector<float>& X_raw, const std::vector<float>
         std::cout << r_XY[a] << ", ";
     }
     std::cout << std::endl;
+     std::ofstream outputFile("cross_correlation.txt");
+    if (outputFile.is_open()) {
+        for (int i = 0; i < r_XY.size(); i++) {
+            outputFile << r_XY[i] << std::endl;
+        }
+        outputFile.close();
+        std::cout << "Sucess" << std::endl;
+    } else {
+        std::cerr << "Failed to open " << std::endl;
+    }
     return 0;
 }
 
@@ -93,7 +103,7 @@ int main() {
     std::vector<float> Y_values;
 
     if (processor.importFromFile("xyvalues.txt", X_values, Y_values)) {
-        std::cout << "Import successful.\n";
+        std::cout << "Import successful";
 
         int n_X = X_values.size();
         int n_Y = Y_values.size();
